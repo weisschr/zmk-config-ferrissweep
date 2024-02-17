@@ -19,6 +19,32 @@
 #define HRML(k1,k2,k3,k4) &ht RGUI k1  &ht RCTRL k2  &ht RALT k3  &ht RSHFT k4
 
 / {
+    combos {
+        compatible = "zmk,combos";
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <14 15>;
+            bindings = <&kp ESC>;
+        };
+		combo_winclose {
+            timeout-ms = <50>;
+            key-positions = <4 5>;
+            bindings = <&kp LC(F4)>;
+        };
+		combo_appclose {
+            timeout-ms = <50>;
+            key-positions = <24 25>;
+            bindings = <&kp LA(F4)>;
+        };
+		combo_caplock {
+            timeout-ms = <50>;
+            key-positions = <23 24 25>;
+            bindings = <&kp LCAPS>;
+        };
+    };
+};
+
+/ {
     behaviors {
         ht: hold_tap {
             compatible = "zmk,behavior-hold-tap";
