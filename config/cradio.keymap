@@ -20,8 +20,8 @@
 
 // Shorter keys
 
-#define LMEH LC(LA(LSHIFT)))
-#define RMEH RC(RA(RSHIFT)))
+#define LMEH LC(LA(LSHIFT))
+#define RMEH RC(RA(RSHIFT))
 #define CALDEL LC(LA(DEL))
 
 / {
