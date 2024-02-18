@@ -16,46 +16,45 @@
 
 // Define positions for combos
 
-#define qk 1
-#define wk 2
-#define ek 3
-#define rk 4
-#define tk 5
-#define yk 6
-#define uk 7
-#define ik 8
-#define ok 9
-#define pk 10
-#define ak 11
-#define sk 12
-#define dk 13
-#define fk 14
-#define gk 15
-#define hk 16
-#define jk 17
-#define kk 18
-#define lk 19
-#define semik 20
-#define zk 21
-#define xk 22
-#define ck 23
-#define vk 24
-#define bk 25
-#define nk 26
-#define mk 27
-#define commak 28
-#define periodk 29
-#define slashk 30
-#define tabk 31
-#define spacek 32
-#define enterk 33
-#define backspk 34
+#define	qk	0
+#define	wk	1
+#define	ek	2
+#define	rk	3
+#define	tk	4
+#define	yk	5
+#define	uk	6
+#define	ik	7
+#define	ok	8
+#define	pk	9
+#define	ak	10
+#define	sk	11
+#define	dk	12
+#define	fk	13
+#define	gk	14
+#define	hk	15
+#define	jk	16
+#define	kk	17
+#define	lk	18
+#define	semik	19
+#define	zk	20
+#define	xk	21
+#define	ck	22
+#define	vk	23
+#define	bk	24
+#define	nk	25
+#define	mk	26
+#define	commak	27
+#define	periodk	28
+#define	slashk	29
+#define	tabk	30
+#define	spacek	31
+#define	enterk	32
+#define	backspk	33
 
-/*
+
 &caps_word {
     continue-list = <BACKSPACE DELETE>;
 };
-*/
 
 / {
     combos {
@@ -107,32 +106,32 @@
         // Layer combos
         
         combo_alpha {
-            timeout-ms = <50>;
+            timeout-ms = <200>;
             key-positions = <jk kk lk>;
             bindings = <&to LAYER_ALPHA>;
         };
         combo_mouse {
-            timeout-ms = <50>;
+            timeout-ms = <200>;
             key-positions = <uk ik ok>;
             bindings = <&to LAYER_MOUSE>;
         };
         combo_numbsym {
-            timeout-ms = <50>;
+            timeout-ms = <200>;
             key-positions = <hk jk kk>;
             bindings = <&to LAYER_NUMBSYM>;
         };
         combo_numbsymosl {
-            timeout-ms = <50>;
+            timeout-ms = <200>;
             key-positions = <hk kk>;
             bindings = <&sl LAYER_NUMBSYM>;
         };
         combo_apps {
-            timeout-ms = <50>;
+            timeout-ms = <200>;
             key-positions = <yk uk ik>;
             bindings = <&to LAYER_APPCONTROL>;
         };
         combo_appsosl {
-            timeout-ms = <50>;
+            timeout-ms = <200>;
             key-positions = <yk ik>;
             bindings = <&sl LAYER_APPCONTROL>;
         };
@@ -140,77 +139,77 @@
         // Behavioral
 
         combo_esc {
-            timeout-ms = <50>;
+            timeout-ms = <100>;
             key-positions = <fk gk>;
             bindings = <&kp ESC>;
         };
 		combo_winclose {
-            timeout-ms = <50>;
+            timeout-ms = <300>;
             key-positions = <rk tk>;
             bindings = <&kp LC(F4)>;
         };
 		combo_appclose {
-            timeout-ms = <50>;
+            timeout-ms = <300>;
             key-positions = <vk bk>;
             bindings = <&kp LA(F4)>;
         };
 		combo_caplock {
-            timeout-ms = <50>;
+            timeout-ms = <200>;
             key-positions = <ck vk bk>;
             bindings = <&kp LCAPS>;
         };
 		combo_capsword {
-            timeout-ms = <50>;
+            timeout-ms = <200>;
             key-positions = <ck bk>;
             bindings = <&caps_word>;
         };
 		combo_del {
-            timeout-ms = <50>;
+            timeout-ms = <200>;
             key-positions = <dk gk>;
             bindings = <&kp DEL>;
         };
 		combo_ins {
-            timeout-ms = <50>;
+            timeout-ms = <300>;
             key-positions = <ck bk>;
             bindings = <&kp INS>;
         };
 		combo_leftarr {
-            timeout-ms = <50>;
+            timeout-ms = <100>;
             key-positions = <dk fk gk>;
             bindings = <&kp LEFT>;
         };
 		combo_rightarr {
-            timeout-ms = <50>;
+            timeout-ms = <100>;
             key-positions = <ek rk tk>;
             bindings = <&kp RIGHT>;
         };
 		combo_uparr {
-            timeout-ms = <50>;
+            timeout-ms = <100>;
             key-positions = <wk ek rk>;
             bindings = <&kp UP>;
         };
 		combo_dnarr {
-            timeout-ms = <50>;
+            timeout-ms = <100>;
             key-positions = <sk dk fk>;
             bindings = <&kp DOWN>;
         };
 		combo_pgup {
-            timeout-ms = <50>;
+            timeout-ms = <100>;
             key-positions = <fk jk>;
             bindings = <&kp PG_UP>;
         };
 		combo_pgdn {
-            timeout-ms = <50>;
+            timeout-ms = <100>;
             key-positions = <vk mk>;
             bindings = <&kp PG_DN>;
         };
 		combo_home {
-            timeout-ms = <50>;
+            timeout-ms = <100>;
             key-positions = <gk hk>;
             bindings = <&kp HOME>;
         };
 		combo_end {
-            timeout-ms = <50>;
+            timeout-ms = <100>;
             key-positions = <bk nk>;
             bindings = <&kp END>;
         };
@@ -223,7 +222,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <220>;
+            tapping-term-ms = <250>;
             quick-tap-ms = <150>;
             require-prior-idle-ms = <100>;
             bindings = <&kp>, <&kp>;
