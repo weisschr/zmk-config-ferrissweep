@@ -256,7 +256,7 @@
             bindings = <
         //╭──────────┬──────────┬────────────┬──────────────┬────────────────╮   ╭────────────────┬──────────────┬────────────┬──────────┬──────────╮
         //│  Q       │  W       │  E         │  R           │  T             │   │  Y             │  U           │  I         │  O       │  P       │
-            &kp Q      &kp W     &ht LHYPER E &ht LC(LALT) R &ht LGUI T          &ht RGUI Y        &ht RC(RALT) U &ht RHYPER I &kp O      &kp P
+            &kp Q      &kp W     &ht LHYPER E &ht LC(LALT) R &ht LGUI T           &ht RGUI Y       &ht RC(RALT) U &ht RHYPER I &kp O      &kp P
         //├──────────┼──────────┼────────────┼──────────────┼────────────────┤   ├────────────────┼──────────────┼────────────┼──────────┼──────────┤
         //│  A       │  S       │  D         │  F           │  G             │   │  H             │  J           │  K         │  L       │  ; :     │
             &kp A      &kp S     &ht LMEH D   &ht LCTRL F    &ht LC(LSHIFT) G     &ht RC(RSHIFT) H &ht RCTRL J    &ht RMEH K   &kp L      &kp SEMI
@@ -264,7 +264,7 @@
         //│  Z       │  X       │  C         │  V           │  B             │   │  N             │  M           │ , <        │ . >      │ / ?      │
             &kp Z      &kp X     &kp C        &ht LALT V     &ht LS(LALT) B       &ht LS(LALT) N   &ht RALT M      &kp COMMA   &kp DOT    &kp FSLH
         //╰──────────┴──────────┴────────────┼──────────────┼────────────────┤   ├────────────────┼──────────────┼────────────┴──────────┴──────────╯
-                                              &kp TAB        &pt LSHFT SPACE     &pt RSHIFT ENTER  &kp BSPC
+                                              &kp TAB        &pt LSHIFT SPACE     &pt RSHIFT ENTER  &kp BSPC
         //                                   ╰──────────────┴────────────────╯   ╰────────────────┴──────────────╯
             >;
         };
@@ -281,7 +281,7 @@
         //│ ` ~      │   \  |   │  = +     │  -       │  _       │   │  ' "     │  ; :     │ , <      │   . >    │   / ?    │
            &kp GRAVE  &kp BSLH   &kp EQUAL  &kp MINUS  &kp UNDER       &kp SQT   &kp SEMI   &kp COMMA   &kp DOT    &kp SLASH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &kp ESC        &trans     &trans
+                                             &trans     &trans        &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -315,7 +315,7 @@
         //│              │          │            │          │            │   │                  │              │                │                  │          │
            &kp LA(HOME)   &kp LC(N)  &kp LEFT     &kp RIGHT  &kp DOWN         &mwh SCROLL_LEFT   &mwh SCROLL_UP &mwh SCROLL_DOWN &mwh SCROLL_RIGHT  &C_AC_STOP
         //╰──────────────┴──────────┴────────────┼──────────┼────────────┤   ├──────────────────┼──────────────┼────────────────┴──────────────────┴──────────╯
-                                                  &trans     &trans         &trans              &trans
+                                                  &trans     &trans           &trans              &trans
         //                                       ╰──────────┴────────────╯   ╰──────────────────┴──────────────╯
             >;
         };
