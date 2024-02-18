@@ -250,8 +250,6 @@
         };
     };
 
-    behaviors
-
     keymap {
         compatible = "zmk,keymap";
         alpha_layer {
