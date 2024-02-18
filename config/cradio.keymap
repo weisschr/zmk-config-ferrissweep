@@ -57,11 +57,11 @@
 #define enterk 33
 #define backspk 34
 
-
+/*
 &caps_word {
     continue-list = <BACKSPACE DELETE>;
 };
-
+*/
 
 / {
     combos {
@@ -220,8 +220,6 @@
             key-positions = <bk nk>;
             bindings = <&kp END>;
         };
-
-
     };
 };
 
@@ -248,17 +246,18 @@
 
     keymap {
         compatible = "zmk,keymap";
+        
         alpha_layer {
             bindings = <
         //╭──────────┬──────────┬────────────┬──────────────┬────────────────╮   ╭────────────────┬──────────────┬────────────┬──────────┬──────────╮
         //│  Q       │  W       │  E         │  R           │  T             │   │  Y             │  U           │  I         │  O       │  P       │
-            &kp Q      &kp W     &ht LHYPER E &ht LC(LALT) R &ht LGUI T           &ht RGUI Y       &ht RC(RALT) U &ht RHYPER I &kp O      &kp P
+          &kp Q      &kp W      &ht LHYPER E &ht LC(LALT) R &ht LGUI T           &ht RGUI Y       &ht RC(RALT) U &ht RHYPER I &kp O      &kp P
         //├──────────┼──────────┼────────────┼──────────────┼────────────────┤   ├────────────────┼──────────────┼────────────┼──────────┼──────────┤
         //│  A       │  S       │  D         │  F           │  G             │   │  H             │  J           │  K         │  L       │  ; :     │
-            &kp A      &kp S     &ht LMEH D   &ht LCTRL F    &ht LC(LSHIFT) G     &ht RC(RSHIFT) H &ht RCTRL J    &ht RMEH K   &kp L      &kp SEMI
+          &kp A      &kp S      &ht LMEH D   &ht LCTRL F    &ht LC(LSHIFT) G     &ht RC(RSHIFT) H &ht RCTRL J    &ht RMEH K   &kp L      &kp SEMI
         //├──────────┼──────────┼────────────┼──────────────┼────────────────┤   ├────────────────┼──────────────┼────────────┼──────────┼──────────┤
         //│  Z       │  X       │  C         │  V           │  B             │   │  N             │  M           │ , <        │ . >      │ / ?      │
-            &kp Z      &kp X     &kp C        &ht LALT V     &ht LS(LALT) B       &ht LS(LALT) N   &ht RALT M      &kp COMMA   &kp DOT    &kp FSLH
+          &kp Z      &kp X      &kp C        &ht LALT V     &ht LS(LALT) B       &ht LS(LALT) N   &ht RALT M     &kp COMMA    &kp DOT    &kp FSLH
         //╰──────────┴──────────┴────────────┼──────────────┼────────────────┤   ├────────────────┼──────────────┼────────────┴──────────┴──────────╯
                                               &kp TAB        &pt LSHIFT SPACE     &pt RSHIFT ENTER  &kp BSPC
         //                                   ╰──────────────┴────────────────╯   ╰────────────────┴──────────────╯
