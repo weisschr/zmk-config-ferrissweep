@@ -273,9 +273,9 @@ alpha_layer {
 
 appcontrol_layer {
             bindings = <
-     &bt BT_CLR &bt BT_SEL 0 &none &none  &none    &kp LG(E)     &bootloader  &sys_reset  &none   &none
-     &none      &bt BT_SEL 1 &none &none  &none    &kp C_AL_CALC    &none        &none       &none   &none
-     &none      &bt BT_SEL 2 &none &none  &none    &kp LS(LG(S)) &none        &none       &none   &none
+     &bt BT_CLR &bt BT_SEL 0 &none &none  &kp LS(LC(LA(LG(T))))    &kp LG(E)      &bootloader  &sys_reset  &none   &none
+     &none      &bt BT_SEL 1 &none &none  &kp LS(LC(LA(LG(W))))    &kp C_AL_CALC  &none        &none       &none   &none
+     &none      &bt BT_SEL 2 &none &none  &kp LS(LC(LA(LG(X))))    &kp LS(LG(S))  &none        &none       &none   &none
                                    &trans &trans   &trans &trans
             >;
         };
