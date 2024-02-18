@@ -20,10 +20,6 @@
 #define LHYPER(x1) &kp LS(LC(LA(LG(x1)))) 
 #define RHYPER(x1) &kp RS(RC(RA(RG(x1))))
 
-// Home row mods macro
-#define HRMR(k1,k2,k3,k4) &ht LSHFT k1  &ht LALT k2  &ht LCTRL k3  &ht LGUI k4
-#define HRML(k1,k2,k3,k4) &ht RGUI k1  &ht RCTRL k2  &ht RALT k3  &ht RSHFT k4
-
 // Define positions for combos
 
 #define qk 1
