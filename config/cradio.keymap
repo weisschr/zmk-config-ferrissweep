@@ -281,7 +281,7 @@ mouse_layer {
             bindings = <    
            &kp LA(LEFT)   &kp LC(T)  &kp C_VOL_DN &kp C_MUTE &kp C_VOL_UP     &kp HOME           &kp PG_UP      &mmv MOVE_UP     &kp PG_DN          &kp C_AC_SEARCH 
            &kp LA(RIGHT)  &mkp LCLK  &mkp MCLK    &mkp RCLK   &kp UP          &kp END            &mmv MOVE_LEFT &mmv MOVE_DOWN   &mmv MOVE_RIGHT    &kp RC(R)
-           &kp LA(HOME)   &kp LC(N)  &kp LEFT     &kp RIGHT  &kp DOWN         &mwh SCROLL_LEFT   &mwh SCROLL_UP &mwh SCROLL_DOWN &mwh SCROLL_RIGHT  &C_AC_STOP
+           &kp LA(HOME)   &kp LC(N)  &kp LEFT     &kp RIGHT  &kp DOWN         &msc SCROLL_LEFT   &msc SCROLL_UP &msc SCROLL_DOWN &msc SCROLL_RIGHT  &C_AC_STOP
                                                   &trans     &trans           &trans              &trans
             >;
         };
