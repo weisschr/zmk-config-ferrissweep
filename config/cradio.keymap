@@ -19,6 +19,10 @@
 #define LMEH LC(LA(LSHIFT))
 #define RMEH RC(RA(RSHIFT))
 #define CALDEL LC(LA(DEL))
+
+#define LHYPR &kp LS(LC(LA(LGUI))) 
+#define RHYPR &kp RS(RC(RA(RGUI)))
+
 #define LHYPER(x1) &kp LS(LC(LA(LG(x1)))) 
 #define RHYPER(x1) &kp RS(RC(RA(RG(x1))))
 
@@ -249,12 +253,20 @@
     keymap {
         compatible = "zmk,keymap";
         
-        alpha_layer {
+alpha_layer {
             bindings = <
-          &kp Q      &kp W      &kp E   &kp R        &kp T             &kp Y            &kp U        &kp I     &kp O      &kp P
-          &kp A      &kp S      &kp D   &ht LCTRL F  &ht LS(LCTRL) G   &ht RS(RCTRL) H  &ht RCTRL J  &kp K     &kp L      &kp SEMI
-          &kp Z      &kp X      &kp C   &kp V        &kp B             &kp N            &kp M        &kp COMMA &kp DOT    &kp FSLH
-                                        &kp TAB      &pt LSHIFT SPACE  &kp ENTER        &pt RSHIFT BSPC
+        //╭──────────┬──────────┬────────────┬──────────────┬────────────────╮   ╭────────────────┬──────────────┬────────────┬──────────┬──────────╮
+        //│  Q       │  W       │  E         │  R           │  T             │   │  Y             │  U           │  I         │  O       │  P       │
+          &kp Q      &kp W      &ht LHYPR E  &ht LC(LALT) R &ht LGUI T           &ht RGUI Y       &ht RC(RALT) U &ht RHYPR I  &kp O      &kp P
+        //├──────────┼──────────┼────────────┼──────────────┼────────────────┤   ├────────────────┼──────────────┼────────────┼──────────┼──────────┤
+        //│  A       │  S       │  D         │  F           │  G             │   │  H             │  J           │  K         │  L       │  ; :     │
+          &kp A      &kp S      &ht LMEH D   &ht LCTRL F    &ht LC(LSHIFT) G     &ht RC(RSHIFT) H &ht RCTRL J    &ht RMEH K   &kp L      &kp SEMI
+        //├──────────┼──────────┼────────────┼──────────────┼────────────────┤   ├────────────────┼──────────────┼────────────┼──────────┼──────────┤
+        //│  Z       │  X       │  C         │  V           │  B             │   │  N             │  M           │ , <        │ . >      │ / ?      │
+          &kp Z      &kp X      &kp C        &ht LALT V     &ht LS(LALT) B       &ht LS(LALT) N   &ht RALT M     &kp COMMA    &kp DOT    &kp FSLH
+        //╰──────────┴──────────┴────────────┼──────────────┼────────────────┤   ├────────────────┼──────────────┼────────────┴──────────┴──────────╯
+                                             &kp TAB        &pt LSHIFT SPACE     &pt RSHIFT ENTER &kp BSPC
+        //                                   ╰──────────────┴────────────────╯   ╰────────────────┴──────────────╯
             >;
         };
 
