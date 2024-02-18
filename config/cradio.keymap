@@ -239,15 +239,13 @@
     };
 
     keymap {
-        compatible = "zmk,keymap";
-        
+        compatible = "zmk,keymap";    
 alpha_layer {
             bindings = <
-        
-          &kp Q      &kp W      &ht LS(LC(LA(LGUI)))  E  &ht LC(LALT) R &ht LGUI T           &ht RGUI Y       &ht RC(RALT) U &ht RS(RC(RA(RGUI))) I  &kp O      &kp P
-          &kp A      &kp S      &ht LC(LA(LSHIFT)) D     &ht LCTRL F    &ht LC(LSHIFT) G     &ht RC(RSHIFT) H &ht RCTRL J    &ht RC(RA(RSHIFT)) K    &kp L      &kp SEMI
-          &kp Z      &kp X      &kp C                    &ht LALT V     &ht LS(LALT) B       &ht LS(LALT) N   &ht RALT M     &kp COMMA    &kp DOT    &kp FSLH
-                                                         &kp TAB        &pt LSHIFT SPACE     &pt RSHIFT ENTER &kp BSPC
+          &kp Q  &kp W  &ht LS(LC(LA(LGUI))) E  &ht LC(LALT) R &ht LGUI T           &ht RGUI Y       &ht RC(RALT) U &ht RS(RC(RA(RGUI))) I  &kp O    &kp P
+          &kp A  &kp S  &ht LC(LA(LSHIFT)) D    &ht LCTRL F    &ht LC(LSHIFT) G     &ht RC(RSHIFT) H &ht RCTRL J    &ht RC(RA(RSHIFT)) K    &kp L    &kp SEMI
+          &kp Z  &kp X  &kp C                   &ht LALT V     &ht LS(LALT) B       &ht LS(LALT) N   &ht RALT M     &kp COMMA               &kp DOT  &kp FSLH
+                                                &kp TAB        &pt LSHIFT SPACE     &pt RSHIFT ENTER &kp BSPC
             >;
         };
 
@@ -270,5 +268,15 @@ alpha_layer {
                                             &trans           &trans               &trans              &trans
             >;
         };
+
+		appcontrol_layer {
+            bindings = <
+     &bt BT_CLR &bt BT_SEL 0 &kp LC(LS(LA(LG(L)))) &kp LC(LS(LA(LG(O)))) &kp LC(LS(LA(LG(T)))) &kp RG(E)     &bootloader     &sys_reset           &none           &none
+     &none      &bt BT_SEL 1 &none                 &kp LC(LS(LA(LG(P)))) &kp LC(LS(LA(LG(W)))) &kp K_CALC    &kp RS(RC(ESC)) &kp RG(R)            &kp K_PWR_POWER &none
+     &none      &bt BT_SEL 2 &none                 &kp LG(DOT)           &kp LC(LS(LA(LG(X)))) &kp LS(LG(S)) &kp RG(V)       &kp C_AL_MY_COMPUTER &kp K_SLEEP     &none
+                                                   &trans                &trans                              &trans          &trans
+            >;
+        };
+
     };
 };
