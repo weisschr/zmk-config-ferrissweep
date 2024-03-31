@@ -121,7 +121,7 @@
         combo_func {
             timeout-ms = <50>;
             key-positions = <nk mk commak>;
-            bindings = <&to LAYER_FUNCTION>;
+            bindings = <&tog LAYER_FUNCTION>;
         };
         combo_funcosl {
             timeout-ms = <50>;
@@ -131,7 +131,7 @@
         combo_apps {
             timeout-ms = <50>;
             key-positions = <yk uk ik>;
-            bindings = <&to LAYER_APPCONTROL>;
+            bindings = <&tog LAYER_APPCONTROL>;
         };
         combo_appsosl {
             timeout-ms = <50>;
