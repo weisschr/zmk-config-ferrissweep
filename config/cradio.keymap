@@ -218,6 +218,16 @@
             key-positions = <bk nk>;
             bindings = <&kp END>;
         };
+    combo_teamsmute {
+            timeout-ms = <50>;
+            key-positions = <rk uk>;
+            bindings = <&kp END>;
+        };
+    combo_teamsvidtog {
+            timeout-ms = <50>;
+            key-positions = <tk yk>;
+            bindings = <&kp END>;
+        };
     };
 };
 
