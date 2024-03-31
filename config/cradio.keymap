@@ -55,6 +55,23 @@
 };
 
 / {
+    maacros {
+        windows_run: windows_run { 
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp RGUI>
+                , <&macro_tap &kp R>
+                , <&macro_release &kp RGUI>
+                , <&macro_tap &kp C &kp O &kp N &kp T &kp R &kp O &kp L &kp ENTER>
+                ;
+
+        };
+    };
+};
+
+
+/ {
     combos {
         compatible = "zmk,combos";
 
@@ -304,8 +321,8 @@ bindings = <
 appcontrol_layer {
 bindings = <
      &bt BT_CLR  &bt BT_SEL 0 &kp LS(LC(LA(LG(L))))  &kp LS(LC(LA(LG(O))))  &kp LS(LC(LA(LG(T))))    &kp LG(E)      &kp C_BRI_UP    &kp C_BRI_DN         &bt BT_SEL 0 &bt BT_CLR
-     &bootloader &bt BT_SEL 1 &kp C_AL_CONTROL_PANEL &kp LS(LC(LA(LG(P))))  &kp LS(LC(LA(LG(W))))    &kp C_AL_CALC  &kp RC(RS(ESC)) &kp LG(R)            &bt BT_SEL 1 &bootloader
-     &sys_reset  &bt BT_SEL 2 &kp C_AL_WWW           &kp LG(DOT)            &kp LS(LC(LA(LG(X))))    &kp LS(LG(S))  &kp LG(V)       &kp C_AL_MY_COMPUTER &bt BT_SEL 2 &sys_reset
+     &bootloader &bt BT_SEL 1 &windows_run           &kp LS(LC(LA(LG(P))))  &kp LS(LC(LA(LG(W))))    &kp C_AL_CALC  &kp RC(RS(ESC)) &kp LG(R)            &bt BT_SEL 1 &bootloader
+     &sys_reset  &bt BT_SEL 2 &kp K_WWW              &kp LG(DOT)            &kp LS(LC(LA(LG(X))))    &kp LS(LG(S))  &kp LG(V)       &kp C_AL_MY_COMPUTER &bt BT_SEL 2 &sys_reset
                                                      &trans                 &trans                   &trans         &trans
             >;
         };
