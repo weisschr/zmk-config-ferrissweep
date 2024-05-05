@@ -55,7 +55,7 @@
 };
 
 / {
-    maacros {
+    macros {
         control_panel: control_panel { 
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -66,7 +66,7 @@
                 , <&macro_tap &kp C &kp O &kp N &kp T &kp R &kp O &kp L &kp ENTER>
                 ;
         };
-         launch_chrome: launch_chrome { 
+        launch_chrome: launch_chrome { 
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -76,7 +76,7 @@
                 , <&macro_tap &kp C &kp H &kp R &kp O &kp M &kp E &kp ENTER>
                 ;
         };
-    mycomputer: mycomputer { 
+    	mycomputer: mycomputer { 
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -182,12 +182,14 @@
             key-positions = <fk gk>;
             bindings = <&kp ESC>;
         };
+	
 	combo_winclose {
             timeout-ms = <50>;
  	    require-prior-idle-ms = <250>;
             key-positions = <rk tk>;
             bindings = <&kp LC(F4)>;
         };
+	
 	combo_appclose {
             timeout-ms = <50>;
  	    require-prior-idle-ms = <250>;
@@ -254,15 +256,15 @@
             key-positions = <bk nk>;
             bindings = <&kp END>;
         };
-    combo_teamsmute {
+    	combo_teamsmute {
             timeout-ms = <50>;
             key-positions = <rk uk>;
-            bindings = <&kp END>;
+            bindings = <&kp LS(LC(M))>;
         };
-    combo_teamsvidtog {
+    	combo_teamsvidtog {
             timeout-ms = <50>;
             key-positions = <tk yk>;
-            bindings = <&kp END>;
+            bindings = <&kp LS(LC(O))>;
         };
     };
 };
@@ -273,9 +275,9 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <250>;
-            quick-tap-ms = <150>;
-            require-prior-idle-ms = <100>;
+            tapping-term-ms = <300>;
+            quick-tap-ms = <200>;
+            require-prior-idle-ms = <150>;
             bindings = <&kp>, <&kp>;
         };
         pt: hold_tap_permissive {
