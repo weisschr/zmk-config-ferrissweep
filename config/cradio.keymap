@@ -291,7 +291,7 @@
         ptl: hold_tap_left {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "balanced";
+            flavor = "hold-preferred";
             tapping-term-ms = <220>;
             quick-tap-ms = <150>;
             bindings = <&kp>, <&kp>;
@@ -300,7 +300,7 @@
         ptr: hold_tap_right {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "balanced";
+            flavor = "hold-preferred";
             tapping-term-ms = <220>;
             quick-tap-ms = <150>;
             bindings = <&kp>, <&kp>;
