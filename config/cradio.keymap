@@ -83,7 +83,7 @@
                 = <&macro_press &kp RGUI>
                 , <&macro_tap &kp R>
                 , <&macro_release &kp RGUI>
-                , <&macro_tap &kp S &kp H &kp E &kp L &kp L &kp COLON &kp M &kp Y &kp C &kp O &kp M &kp P &kp U &kp T &kp E &kp R &kp ENTER>
+                , <&macro_tap &kp S &kp H &kp E &kp L &kp L &kp COLON &kp M &kp Y &kp C &kp O &kp M &kp P &kp U &kp T &kp E &kp R &kp F &kp O &kp L &kp D &kp E &kp R &kp ENTER>
                 ;
         };
     };
