@@ -289,6 +289,26 @@
             require-prior-idle-ms = <125>;
             bindings = <&kp>, <&kp>;
         };
+       htl: hold_tap_ll {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <300>;
+            quick-tap-ms = <200>;
+            require-prior-idle-ms = <300>;
+            hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 30 31 32 33>;
+            bindings = <&kp>, <&kp>;
+        };
+        htr: hold_tap_lr {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <300>;
+            quick-tap-ms = <200>;
+            require-prior-idle-ms = <300>;
+            hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32 33>;
+            bindings = <&kp>, <&kp>;
+        };
         pt: hold_tap_permissive {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -323,8 +343,8 @@
         compatible = "zmk,keymap";
 alpha_layer {
 bindings = <
-    &kp Q  &kp W  &ht LS(LC(LA(LGUI))) E  &ht LC(LALT) R &ht LGUI T           &ht RGUI Y        &ht RC(RALT) U &ht RS(RC(RA(RGUI))) I  &kp O    &kp P
-    &kp A  &kp S  &ht LC(LA(LSHIFT)) D    &ht LCTRL F    &ht LC(LSHIFT) G     &ht RC(RSHIFT) H  &ht RCTRL J    &ht RC(RA(RSHIFT)) K    &kp L    &kp SEMI
+    &kp Q  &kp W  &htl LS(LC(LA(LGUI))) E  &htl LC(LALT) R &htl LGUI T           &htr RGUI Y        &htr RC(RALT) U &htr RS(RC(RA(RGUI))) I  &kp O    &kp P
+    &kp A  &kp S  &htl LC(LA(LSHIFT)) D    &ht LCTRL F    &ht LC(LSHIFT) G     &ht RC(RSHIFT) H  &ht RCTRL J    &htr RC(RA(RSHIFT)) K    &kp L    &kp SEMI
     &kp Z  &kp X  &kp C                   &ht LALT V     &ht LS(LALT) B       &ht LS(LALT) N    &ht RALT M     &kp COMMA               &kp DOT  &kp FSLH
                                           &kp TAB        &ptl LSHIFT SPACE    &ptr RSHIFT ENTER &kp BSPC
             >;
