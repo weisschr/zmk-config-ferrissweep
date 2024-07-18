@@ -97,9 +97,9 @@
 	    #binding-cells = <2>;
 	    bindings
 	        = <&macro_param_1to1>
-	        , <&macro_tap &sl MACRO_PLACEHOLDER>
-	        , <&macro_param_2to1>
 	        , <&macro_tap &sk MACRO_PLACEHOLDER>
+	        , <&macro_param_2to1>
+	        , <&macro_tap &sl MACRO_PLACEHOLDER>
 	        ;
 	};
     };
@@ -201,7 +201,7 @@
 	comnbo_layermod {
 	    timeout-ms = <50>;
             key-positions = <hk jk>;
-            bindings = <&lm LAYER_NUMBSYM LSHIFT>;
+            bindings = <&lm LSHIFT LAYER_NUMBSYM>;
 	};
 
         // Behavioral
