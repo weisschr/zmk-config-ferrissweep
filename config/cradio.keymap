@@ -206,13 +206,18 @@
         };
         
 	// activate number layer with shift when held.
-	comnbo_layermod {
+	comnbo_layermod_left {
 	    timeout-ms = <50>;
             key-positions = <hk jk>;
+            bindings = <&lm LAYER_NUMBSYM RSHIFT>;
+	};
+	comnbo_layermod_right {
+	    timeout-ms = <50>;
+            key-positions = <sk fk>;
             bindings = <&lm LAYER_NUMBSYM LSHIFT>;
 	};
-
-        // Behavioral
+       
+	// Behavioral
 
         combo_esc {
             timeout-ms = <50>;
