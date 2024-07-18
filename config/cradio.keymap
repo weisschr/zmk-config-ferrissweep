@@ -91,7 +91,7 @@
                 ;
         };
         // Layer with mod when held
-	lm: lm {
+	/* lm: lm {
 	    compatible = "zmk,behavior-macro-two-param";
 	    wait-ms = <0>;
 	    tap-ms = <0>;
@@ -106,6 +106,18 @@
 	        , <&macro_release &kp MACRO_PLACEHOLDER>
 	        , <&macro_param_1to1>
 	        , <&macro_release &mo MACRO_PLACEHOLDER>
+	        ;
+	};*/
+	lm: lm {
+	    compatible = "zmk,behavior-macro-two-param";
+	    wait-ms = <0>;
+	    tap-ms = <0>;
+	    #binding-cells = <2>;
+	    bindings
+	        = <&macro_param_1to1>
+	        , <&macro_tap &sl MACRO_PLACEHOLDER>
+	        , <&macro_param_2to1>
+	        , <&macro_tap &sk MACRO_PLACEHOLDER>
 	        ;
 	};
     };
