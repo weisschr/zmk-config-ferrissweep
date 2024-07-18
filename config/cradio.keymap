@@ -209,7 +209,7 @@
 	comnbo_layermod {
 	    timeout-ms = <50>;
             key-positions = <hk jk>;
-            bindings = <&lm LSHIFT LAYER_NUMBSYM>;
+            bindings = <&lm LAYER_NUMBSYM LSHIFT>;
 	};
 
         // Behavioral
