@@ -97,9 +97,9 @@
 	    #binding-cells = <2>;
 	    bindings
 	        = <&macro_param_1to1>
-	        , <&macro_tap &sl MACRO_PLACEHOLDER_1>
+	        , <&macro_tap &sl MACRO_PARAM_1>
 	        , <&macro_param_2to1>
-	        , <&macro_tap &sk MACRO_PLACEHOLDER_2>
+	        , <&macro_tap &sk MACRO_PARAM_2>
 	        ;
 	};
     };
