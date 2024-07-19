@@ -93,13 +93,11 @@
         // Layer with mod when held
 	
 	lm: lm {
-	    compatible = "zmk,behavior-macro-two-param";
-	    #binding-cells = <2>;
+	    compatible = "zmk,behavior-macro";
+	    #binding-cells = <0>;
 	    bindings
-	        = <&macro_param_1to1>
-	        , <&macro_tap &sl MACRO_PARAM_1>
-	        , <&macro_param_2to1>
-	        , <&macro_tap &sk MACRO_PARAM_2>
+	        = <&macro_tap &sl LAYER_NUMBSYM>
+	        , <&macro_tap &sk RSHIFT>
 	        ;
 	};
     };
@@ -198,15 +196,11 @@
         };
         
 	// activate number layer with shift when held.
-	comnbo_layermod_left {
-	    timeout-ms = <50>;
-            key-positions = <hk jk>;
-            bindings = <&lm LAYER_NUMBSYM RSHIFT>;
-	};
+
 	comnbo_layermod_right {
 	    timeout-ms = <50>;
             key-positions = <sk fk>;
-            bindings = <&lm LAYER_NUMBSYM LSHIFT>;
+            bindings = <&lm>;
 	};
        
 	// Behavioral
