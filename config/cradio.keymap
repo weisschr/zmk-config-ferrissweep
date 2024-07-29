@@ -383,6 +383,21 @@
             key-positions = <tk yk>;
             bindings = <&kp LS(LC(O))>;
         };
+
+	// Boot key combos
+
+	combo_bootleft {
+            timeout-ms = <50>;
+            key-positions = <qk tk>;
+            bindings = <&bootloader>;
+        };
+
+	combo_bootright {
+            timeout-ms = <50>;
+            key-positions = <yk pk>;
+            bindings = <&bootloader>;
+        };
+
     };
 };
 
