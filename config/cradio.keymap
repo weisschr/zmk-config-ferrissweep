@@ -526,10 +526,10 @@ bindings = <
 
 mouse_layer {
 bindings = <
-    &trans &kp LC(T)    &trans         &trans      &kp UP         &kp PG_UP    &msc SCRL_LEFT &mmv MOVE_UP    &msc SCRL_RIGHT    &trans
-    &trans &mkp LCLK    &mkp MCLK      &mkp  RCLK  &kp DOWN       &kp PG_DN    &mmv MOVE_LEFT &mmv MOVE_DOWN  &mmv MOVE_RIGHT    &trans
-    &trans &kp LC(N)    &kp LS(LC(N))  &kp LEFT    &kp RIGHT      &kp HOME     &msc SCRL_UP   &msc SCRL_DOWN  &kp END            &trans
-                                       &trans      &trans         &trans       &trans
+    &LC(LS(O)) &kp LC(T)    &kp LC(LS(T))  &LA(HOME)      &kp UP      &kp PG_UP    &msc SCRL_LEFT &mmv MOVE_UP    &msc SCRL_RIGHT  &kp K_VOL_UP
+    &LC(D)     &mkp LCLK    &mkp MCLK      &mkp  RCLK  &kp DOWN       &kp PG_DN    &mmv MOVE_LEFT &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp K_VOL_DN
+    &LC(LS(B)) &kp LC(N)    &kp LS(LC(N))  &kp LEFT    &kp RIGHT      &kp HOME     &msc SCRL_UP   &msc SCRL_DOWN  &kp END          &kp K_MUTE
+                                             &trans      &trans       &trans       &trans
             >;
         };
     };
